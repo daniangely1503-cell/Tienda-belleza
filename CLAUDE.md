@@ -27,6 +27,17 @@ Después usa la skill `web-scrolling` automáticamente.
 - Si no tienes fotos, usa placeholders y te avisa dónde poner las tuyas
 - Si no tienes testimonios, omite esa sección
 
+## Diseño responsivo (obligatorio)
+
+Todo el código HTML/CSS que se genere debe ser 100% responsivo por defecto:
+
+- **Unidades relativas:** usa `rem`, `em`, `%`, `vw`, `vh`, `clamp()` y `min()`/`max()` para tamaños, espaciados y tipografía. Evita `px` fijos salvo en bordes finos o sombras.
+- **Medios fluidos:** imágenes, vídeos, canvas e iframes siempre con `max-width: 100%` y `height: auto`.
+- **Layouts flexibles:** los contenedores flex usan `flex-wrap: wrap`; las rejillas usan `grid-template-columns: repeat(auto-fit, minmax(..., 1fr))` cuando tenga sentido.
+- **Media queries:** enfoque mobile-first con breakpoints al menos en `min-width: 600px`, `900px` y `1200px`.
+- **Viewport:** incluye siempre `<meta name="viewport" content="width=device-width, initial-scale=1">`.
+- **Sin scroll horizontal:** nada debe desbordar el ancho de pantalla en móvil (comprobar a 360px de ancho).
+
 ## Si tienes un vídeo
 
 Ponlo en `assets/hero.mp4` y pide "quiero el efecto de vídeo con scroll". El vídeo avanzará fotograma a fotograma con el scroll, como en la web de Apple.
